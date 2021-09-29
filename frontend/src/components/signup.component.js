@@ -4,7 +4,15 @@ export default class SignUp extends Component {
     render() {
         return (
             <form>
-                <h3>Registro</h3>
+                <h3>Registro de Usuarios </h3>
+
+                <div className="form-group">
+                    <label>Tipo Usuario</label>
+                    <select className="form-control" id="tipo" name="tipo">
+                        <option value="Vendedor"> Vendedor </option>
+                        <option value="Administrador"> Administrador </option>
+                    </select>
+                </div>
 
                 <div className="form-group">
                     <label>Nombre</label>
@@ -25,7 +33,8 @@ export default class SignUp extends Component {
                     <label>Clave</label>
                     <input type="password" className="form-control" placeholder="Clave" />
                 </div>
-
+                <br/>
+                
                 <button type="submit" className="btn btn-primary btn-block">Registrarse</button>
                 <p className="forgot-password text-right">
                     Ya se encuentra registrado <a href="#">Acceder ?</a>

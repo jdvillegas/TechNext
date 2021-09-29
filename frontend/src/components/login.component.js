@@ -7,6 +7,14 @@ export default class Login extends Component {
                 <h3>Acceso</h3>
 
                 <div className="form-group">
+                    <label>Tipo Usuario</label>
+                    <select className="form-control" id="tipo" name="tipo">
+                        <option value="Vendedor"> Vendedor </option>
+                        <option value="Administrador"> Administrador </option>
+                    </select>
+                </div>
+
+                <div className="form-group">
                     <label>Correo Electronico</label>
                     <input type="email" className="form-control" placeholder="Ingrese Correo" />
                 </div>
@@ -15,6 +23,8 @@ export default class Login extends Component {
                     <label>Clave</label>
                     <input type="password" className="form-control" placeholder="Ingrese Clave" />
                 </div>
+
+                
 
                 <div className="form-group">
                     <div className="custom-control custom-checkbox">
