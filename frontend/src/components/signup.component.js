@@ -4,31 +4,31 @@ export default class SignUp extends Component {
     render() {
         return (
             <form>
-                <h3>Sign Up</h3>
+                <h3>Registro</h3>
 
                 <div className="form-group">
-                    <label>First name</label>
-                    <input type="text" className="form-control" placeholder="First name" />
+                    <label>Nombre</label>
+                    <input type="text" className="form-control" placeholder="Nombre" />
                 </div>
 
                 <div className="form-group">
-                    <label>Last name</label>
-                    <input type="text" className="form-control" placeholder="Last name" />
+                    <label>Apellido</label>
+                    <input type="text" className="form-control" placeholder="Apellido" />
                 </div>
 
                 <div className="form-group">
-                    <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
+                    <label>Correo</label>
+                    <input type="email" className="form-control" placeholder="Correo" />
                 </div>
 
                 <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
+                    <label>Clave</label>
+                    <input type="password" className="form-control" placeholder="Clave" />
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+                <button type="submit" className="btn btn-primary btn-block">Registrarse</button>
                 <p className="forgot-password text-right">
-                    Already registered <a href="#">sign in?</a>
+                    Ya se encuentra registrado <a href="#">Acceder ?</a>
                 </p>
             </form>
         );
