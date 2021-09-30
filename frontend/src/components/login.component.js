@@ -1,14 +1,26 @@
-import React, { Component } from "react";
+import React, { Component, userRef } from "react";
+
+
+
+
+const login = () => {
+    alert("LOGIN");
+    alert(this.email);
+} 
 
 export default class Login extends Component {
+    constructor(props) 
+    {
+        super(props);
+    }    
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit} >
                 <h3>Acceso</h3>
 
                 <div className="form-group">
                     <label>Tipo Usuario</label>
-                    <select className="form-control" id="tipo" name="tipo">
+                    <select className="form-control" id="tipo" name="tipo" ref={this.tipo}>
                         <option value="Vendedor"> Vendedor </option>
                         <option value="Administrador"> Administrador </option>
                     </select>
@@ -16,12 +28,12 @@ export default class Login extends Component {
 
                 <div className="form-group">
                     <label>Correo Electronico</label>
-                    <input type="email" className="form-control" placeholder="Ingrese Correo" />
+                    <input type="email" className="form-control" placeholder="Ingrese Correo" ref={this.email} />
                 </div>
 
                 <div className="form-group">
                     <label>Clave</label>
-                    <input type="password" className="form-control" placeholder="Ingrese Clave" />
+                    <input type="password" className="form-control" placeholder="Ingrese Clave" ref={this.password} />
                 </div>
 
                 
@@ -33,7 +45,7 @@ export default class Login extends Component {
                     </div>
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-block">Entrar</button>
+                <button type="submit" className="btn btn-primary btn-block" onClick={()=>login()} >Entrar</button>
                 <p className="forgot-password text-right">
                     Olvido su <a href="#">Clave?</a>
                 </p>
