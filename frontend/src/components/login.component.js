@@ -1,19 +1,15 @@
-import React, { Component, userRef } from "react";
+import React, { Component, userState } from "react";
 
 
 
 
 const login = () => {
-    alert("LOGIN");
-    alert(this.email);
+    
+    
 } 
 
-export default class Login extends Component {
-    constructor(props) 
-    {
-        super(props);
-    }    
-    render() {
+function Login(props) {
+    
         return (
             <form onSubmit={this.handleSubmit} >
                 <h3>Acceso</h3>
@@ -51,5 +47,8 @@ export default class Login extends Component {
                 </p>
             </form>
         );
-    }
+
 }
+
+
+

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 
-export default class ProductRegistration extends Component {
-    render() {
+function ProductRegistration(props) {
+   
         return (
             <form>
                 <h3>Registro de productos</h3>
@@ -36,5 +36,5 @@ export default class ProductRegistration extends Component {
             
            
         );
-    }
+    
 }

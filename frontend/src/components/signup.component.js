@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 
-
-
-
-
-export default class SignUp extends Component {
-    render() {
+function SignUp(props) {
+    
         return (
             <form>
                 <h3>Registro de Usuarios </h3>
@@ -45,5 +41,5 @@ export default class SignUp extends Component {
                 </p>
             </form>
         );
-    }
+    
 }
