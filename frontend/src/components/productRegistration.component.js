@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 
-function ProductRegistration(props) {
+export function ProductRegistration(props) {
    
         return (
             <form>
@@ -33,8 +33,8 @@ function ProductRegistration(props) {
                 <button type="button" class="btn btn-primary">Guardar</button>
                 
             </form>
-            
-           
         );
+           
+        
     
 }

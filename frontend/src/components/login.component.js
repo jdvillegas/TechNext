@@ -1,22 +1,15 @@
-import React, { Component, userState } from "react";
 
+import React, { Component } from "react";
 
-
-
-const login = () => {
-    
-    
-} 
-
-function Login(props) {
+export function Login(props) {
     
         return (
-            <form onSubmit={this.handleSubmit} >
+            <form  >
                 <h3>Acceso</h3>
 
                 <div className="form-group">
                     <label>Tipo Usuario</label>
-                    <select className="form-control" id="tipo" name="tipo" ref={this.tipo}>
+                    <select className="form-control" id="tipo" name="tipo" >
                         <option value="Vendedor"> Vendedor </option>
                         <option value="Administrador"> Administrador </option>
                     </select>
@@ -24,12 +17,12 @@ function Login(props) {
 
                 <div className="form-group">
                     <label>Correo Electronico</label>
-                    <input type="email" className="form-control" placeholder="Ingrese Correo" ref={this.email} />
+                    <input type="email" className="form-control" placeholder="Ingrese Correo"  />
                 </div>
 
                 <div className="form-group">
                     <label>Clave</label>
-                    <input type="password" className="form-control" placeholder="Ingrese Clave" ref={this.password} />
+                    <input type="password" className="form-control" placeholder="Ingrese Clave"  />
                 </div>
 
                 
@@ -41,12 +34,12 @@ function Login(props) {
                     </div>
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-block" onClick={()=>login()} >Entrar</button>
+                <button type="submit" className="btn btn-primary btn-block"  >Entrar</button>
                 <p className="forgot-password text-right">
                     Olvido su <a href="#">Clave?</a>
                 </p>
             </form>
-        );
+        )
 
 }
 

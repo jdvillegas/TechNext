@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-function SignUp(props) {
+export function SignUp(props) {
     
         return (
             <form>
@@ -39,7 +39,7 @@ function SignUp(props) {
                 <p className="forgot-password text-right">
                     Ya se encuentra registrado <a href="#">Acceder ?</a>
                 </p>
-            </form>
-        );
+            </form>);
+        
     
 }

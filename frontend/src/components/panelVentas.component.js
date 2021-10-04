@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-export default class PanelVentas extends Component {
-    render() {
+export function PanelVentas(props) {
+  
         return (
             <form>
                 <h3>Panel de ventas.</h3>
-           </form>
-        );
-    }
+           </form>)
+        ;
+    
 }
