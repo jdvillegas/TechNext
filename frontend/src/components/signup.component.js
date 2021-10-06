@@ -1,8 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 
 export function SignUp(props) {
     
+     const formData = {
+        tipo: null,
+        nombre: null,
+        apellido: null,
+        correo: null,
+        clave: null,
+      }
+
+      const [datos, setDatos] = useState(formData);
+      
+      const enviarDatos = (event) => {
+        event.preventDefault()
+        console.log('enviando datos...' + datos.nombre + ' ' + datos.apellido)
+      }
+
+
         return (
             <form>
                 <h3>Registro de Usuarios </h3>
@@ -38,7 +54,7 @@ export function SignUp(props) {
                 
                 <button type="submit" className="btn btn-primary btn-block">Registrarse</button>
                 <p className="forgot-password text-right">
-                    Ya se encuentra  <Link to={`/log-in`} activeClassName="active"> registrado, acceder?</Link>
+                    Ya se encuentra  <Link to={`/log-in`} > registrado, acceder?</Link>
                 </p>
             </form>);
         
