@@ -1,5 +1,5 @@
-
-import React, { Component } from "react";
+import React  from "react";
+import { Link } from "react-router-dom";
 
 export function Login(props) {
     
@@ -36,7 +36,7 @@ export function Login(props) {
 
                 <button type="submit" className="btn btn-primary btn-block"  >Entrar</button>
                 <p className="forgot-password text-right">
-                    Olvido su <a href="#">Clave?</a>
+                    Olvido su <Link to={`/sign-in`} activeClassName="active">Clave ?</Link>
                 </p>
             </form>
         )

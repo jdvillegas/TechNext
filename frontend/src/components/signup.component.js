@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export function SignUp(props) {
     
@@ -37,7 +38,7 @@ export function SignUp(props) {
                 
                 <button type="submit" className="btn btn-primary btn-block">Registrarse</button>
                 <p className="forgot-password text-right">
-                    Ya se encuentra registrado <a href="#">Acceder ?</a>
+                    Ya se encuentra  <Link to={`/log-in`} activeClassName="active"> registrado, acceder?</Link>
                 </p>
             </form>);
         
