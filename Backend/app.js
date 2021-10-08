@@ -14,7 +14,7 @@ app.use(express.json());
 const cors = require('cors');
 app.use(cors())
 
-require("./rutas/moneda.rutas")(app);
+require("./rutas/producto.rutas")(app);
 require("./rutas/pais.rutas")(app);
 require("./rutas/usuario.rutas")(app);
 
