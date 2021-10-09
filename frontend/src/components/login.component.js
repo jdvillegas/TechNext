@@ -36,7 +36,7 @@ export function Login(props) {
 
                 <button type="submit" className="btn btn-primary btn-block"  >Entrar</button>
                 <p className="forgot-password text-right">
-                    Olvido su <Link to={`/sign-in`} activeClassName="active">Clave ?</Link>
+                    Olvido su <Link to={`/sign-up`}>Clave ?</Link>
                 </p>
             </form>
         )

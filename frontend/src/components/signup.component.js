@@ -4,51 +4,62 @@ import { Link } from "react-router-dom";
 export function SignUp(props) {
     
      const formData = {
-        tipo: null,
-        nombre: null,
-        apellido: null,
-        correo: null,
-        clave: null,
+        tipo: 'Vendedor',
+        nombre: '',
+        apellido: '',
+        correo: '',
+        clave: '',
       }
 
       const [datos, setDatos] = useState(formData);
       
-      const enviarDatos = (event) => {
-        event.preventDefault()
-        console.log('enviando datos...' + datos.nombre + ' ' + datos.apellido)
+
+
+      const handleInputChange = (event) => {
+             
+             setDatos({
+                ...datos,
+                [event.target.name] : event.target.value
+            })    
+      }
+   
+      const enviarDatos = (event) =>{
+          event.preventDefault();
+          
+
       }
 
 
         return (
-            <form>
+            <form onSubmit={enviarDatos} >
                 <h3>Registro de Usuarios </h3>
 
                 <div className="form-group">
                     <label>Tipo Usuario</label>
-                    <select className="form-control" id="tipo" name="tipo">
-                        <option value="Vendedor"> Vendedor </option>
+                    <select className="form-control" name="tipo" onChange={handleInputChange} required>
+                        <option value="Vendedor" selected> Vendedor </option>
                         <option value="Administrador"> Administrador </option>
                     </select>
                 </div>
 
                 <div className="form-group">
                     <label>Nombre</label>
-                    <input type="text" className="form-control" placeholder="Nombre" />
+                    <input type="text" className="form-control" placeholder="Nombre" name="nombre"  onChange={handleInputChange} />
                 </div>
 
                 <div className="form-group">
                     <label>Apellido</label>
-                    <input type="text" className="form-control" placeholder="Apellido" />
+                    <input type="text" className="form-control" placeholder="Apellido" name="apellido" onChange={handleInputChange}  />
                 </div>
 
                 <div className="form-group">
                     <label>Correo</label>
-                    <input type="email" className="form-control" placeholder="Correo" />
+                    <input type="email" className="form-control" placeholder="Correo" name="correo"  onChange={handleInputChange} />
                 </div>
 
                 <div className="form-group">
                     <label>Clave</label>
-                    <input type="password" className="form-control" placeholder="Clave" />
+                    <input type="password" className="form-control" placeholder="Clave" name="clave"  onChange={handleInputChange} />
                 </div>
                 <br/>
                 
