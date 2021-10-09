@@ -30,7 +30,9 @@ export function ListarUsuarios(props) {
                     <td>Mark</td>
                     <td>Otto</td>
                     <td>Vendedor</td>
-                    <td><i class="bi bi-trash"></i></td>
+                    <td>
+                        Eliminar, Editar
+                    </td>
                     </tr>
                     <tr>
                     <td>2</td>
