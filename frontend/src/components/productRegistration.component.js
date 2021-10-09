@@ -33,8 +33,5 @@ export function ProductRegistration(props) {
                 <button type="button" class="btn btn-primary">Guardar</button>
                 
             </form>
-        );
-           
-        
-    
+        );   
 }

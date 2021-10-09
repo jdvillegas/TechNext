@@ -1,11 +1,19 @@
-import React from "react";
+import { React, Card, Button}  from "react";
 
 export function PanelVentas(props) {
   
         return (
-            <form>
-                <h3>Panel de ventas.</h3>
-           </form>)
-        ;
+            <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                Some quick example text to build on the card title and make up the bulk of
+                the card's content.
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+            </Card>
+        );
     
 }

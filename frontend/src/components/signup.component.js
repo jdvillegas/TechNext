@@ -24,9 +24,12 @@ export function SignUp(props) {
       }
    
       const enviarDatos = (event) =>{
-          event.preventDefault();
           
-
+          event.preventDefault();
+          window.location.href = "/PanelVentas";
+          
+          
+           
       }
 
 
@@ -37,7 +40,7 @@ export function SignUp(props) {
                 <div className="form-group">
                     <label>Tipo Usuario</label>
                     <select className="form-control" name="tipo" onChange={handleInputChange} required>
-                        <option value="Vendedor" selected> Vendedor </option>
+                        <option value="Vendedor" defaultValue> Vendedor </option>
                         <option value="Administrador"> Administrador </option>
                     </select>
                 </div>
