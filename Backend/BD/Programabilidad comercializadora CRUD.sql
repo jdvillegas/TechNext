@@ -7,7 +7,7 @@ DROP PROCEDURE IF EXISTS spBuscarProducto;
 DROP PROCEDURE IF EXISTS spActualizarProducto;
 DROP PROCEDURE IF EXISTS spListarUsuarios;
 DROP PROCEDURE IF EXISTS spEditarUsuario;
-DROP PROCEDURE IF EXISTS spIngresarUsuario;
+
 -- ***** PRODUCTO *****
 -- ** Procedimiento almacenado para listar PRODUCTOS
 DELIMITER //
@@ -76,7 +76,7 @@ AS
 SELECT usuario.Id as Id, usuario.Usuario as Usuario, Nombre, Clave, Rol, Activo
 	FROM usuario
 		JOIN rol
-			ON Usuario.Id=rol.Id;
+			ON usuario.IdRol=rol.Id;
             
 CREATE PROCEDURE spListarUsuarios()
 BEGIN
@@ -86,37 +86,14 @@ BEGIN
 END//
 
 CREATE PROCEDURE spEditarUsuario(
-IN Id int,
+IN IdUsuario int,
 IN Dato int,
 IN Tipo int
 )
 BEGIN
-	DECLARE InstruccionSQL varchar(1000);
 	IF Tipo=0 THEN
-		SET InstruccionSQL=CONCAT(InstruccionSQL,' SET  Activo = ', Dato, 'WHERE Id =', Id, ';');
+		UPDATE usuario SET Activo = Dato WHERE Id=IdUsuario;
 	ELSEIF Tipo=1 THEN
-		SET InstruccionSQL=CONCAT(InstruccionSQL,' SET Rol = ', Dato, 'WHERE Id =', Id, ';');
-	END IF;
-END//
-
-CREATE PROCEDURE spIngresarUsuario(
-IN IdUsuario int,
-IN Usuario VARCHAR(100),
-IN Nombre VARCHAR(100),
-IN Clave VARCHAR(50),
-IN IdRol int,
-IN Activo BOOL
-)
-BEGIN
-	IF IdUsuario<=0 THEN
-		INSERT INTO usuario 
-			(
-			Usuario, Nombre, Clave, IdRol, Activo
-			)
-			VALUES(
-			Usuario, Nombre, Clave, IdRol, Activo
-			);
-	ELSE
-		DELETE FROM usuario WHERE Id =  IdUsuario;
+		UPDATE usuario SET IdRol = Dato WHERE Id=IdUsuario;
 	END IF;
 END//
