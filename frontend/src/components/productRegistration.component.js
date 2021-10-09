@@ -4,6 +4,8 @@ import React from "react";
 export function ProductRegistration(props) {
    
         return (
+            <div className="auth-wrapper">
+            <div className="auth-inner">
             <form>
                 <h3>Registro de productos</h3>
                 <div class="mb-3">
@@ -33,5 +35,7 @@ export function ProductRegistration(props) {
                 <button type="button" class="btn btn-primary">Guardar</button>
                 
             </form>
+            </div>
+            </div>
         );   
 }

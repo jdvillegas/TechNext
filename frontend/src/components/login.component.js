@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 export function Login(props) {
     
         return (
+            <div className="auth-wrapper">
+            <div className="auth-inner">
             <form  >
                 <h3>Acceso</h3>
 
@@ -39,6 +41,8 @@ export function Login(props) {
                     Olvido su <Link to={`/sign-up`}>Clave ?</Link>
                 </p>
             </form>
+            </div>
+            </div>
         )
 
 }

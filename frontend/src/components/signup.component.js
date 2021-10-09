@@ -34,6 +34,8 @@ export function SignUp(props) {
 
 
         return (
+            <div className="auth-wrapper">
+            <div className="auth-inner">
             <form onSubmit={enviarDatos} >
                 <h3>Registro de Usuarios </h3>
 
@@ -70,7 +72,11 @@ export function SignUp(props) {
                 <p className="forgot-password text-right">
                     Ya se encuentra  <Link to={`/log-in`} > registrado, acceder?</Link>
                 </p>
-            </form>);
+            </form>
+            </div>
+            </div>
+            
+            );
         
     
 }

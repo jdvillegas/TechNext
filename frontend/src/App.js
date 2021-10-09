@@ -32,9 +32,7 @@ function App() {
           </div>
         </div>
       </nav>
-
-      <div className="auth-wrapper">
-        <div className="auth-inner">
+     
           <Switch>
             <Route exact path='/' component={Login} />
             <Route path="/sign-in" component={Login} />
@@ -42,8 +40,8 @@ function App() {
             <Route path="/PanelVentas" component={PanelVentas} />
             <Route path="/product-registration" component={ProductRegistration} />
           </Switch>
-        </div>
-      </div>
+
+
     </div></Router>
   );
 }
