@@ -4,6 +4,8 @@ module.exports = (app) => {
     //metodo que obtiene una moneda
     app.get("/productos/:id", monedas.obtener);
 
+    app.get("/productos/:dato/:tipo", monedas.buscar);
+
     //metodo que obtiene la lista de monedas
     app.get("/productos", monedas.listar);
 
@@ -12,5 +14,4 @@ module.exports = (app) => {
 
     //metodo que elimina una moneda
     app.delete("/productos/:id", monedas.eliminar);
-
 }

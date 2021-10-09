@@ -46,7 +46,7 @@ Producto.listar = (resultado) => {
 }
 
 //Metodo que obtiene un registro basado en el nombre o eferencia 
-Producto.buscar = (producto, resultado) => {
+Producto.buscar = (dato, tipo, resultado) => {
     sql.query('CALL spBuscarProducto(?, ?);', //consulta sql
         [dato, tipo], //parametros
         (err, res) => {
