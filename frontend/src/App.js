@@ -7,6 +7,7 @@ import {Login} from "./components/login.component";
 import {SignUp} from "./components/signup.component";
 import {PanelVentas} from "./components/panelVentas.component";
 import {ProductRegistration} from './components/productRegistration.component';
+import {ListarUsuarios} from './components/ListarUsuarios.component';
 
 function App() {
   return (<Router>
@@ -28,6 +29,9 @@ function App() {
               <li className="nav-item">
                 <Link className="nav-link" to={"/PanelVentas"}>Panel de Ventas</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/ListarUsuarios"}>Listar Usuarios</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -39,6 +43,8 @@ function App() {
             <Route path="/sign-up" component={SignUp} />
             <Route path="/PanelVentas" component={PanelVentas} />
             <Route path="/product-registration" component={ProductRegistration} />
+            <Route path="/ListarUsuarios" component={ListarUsuarios} />
+            
           </Switch>
 
 
