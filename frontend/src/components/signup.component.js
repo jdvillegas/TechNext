@@ -24,20 +24,25 @@ export function SignUp(props) {
       }
    
       const enviarDatos = (event) =>{
-          event.preventDefault();
           
-
+          event.preventDefault();
+          window.location.href = "/PanelVentas";
+          
+          
+           
       }
 
 
         return (
+            <div className="auth-wrapper">
+            <div className="auth-inner">
             <form onSubmit={enviarDatos} >
                 <h3>Registro de Usuarios </h3>
 
                 <div className="form-group">
                     <label>Tipo Usuario</label>
                     <select className="form-control" name="tipo" onChange={handleInputChange} required>
-                        <option value="Vendedor" selected> Vendedor </option>
+                        <option value="Vendedor" defaultValue> Vendedor </option>
                         <option value="Administrador"> Administrador </option>
                     </select>
                 </div>
@@ -67,7 +72,11 @@ export function SignUp(props) {
                 <p className="forgot-password text-right">
                     Ya se encuentra  <Link to={`/log-in`} > registrado, acceder?</Link>
                 </p>
-            </form>);
+            </form>
+            </div>
+            </div>
+            
+            );
         
     
 }
