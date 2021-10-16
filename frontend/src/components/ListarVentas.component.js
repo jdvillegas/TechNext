@@ -1,7 +1,6 @@
 import { React, Table}  from "react-bootstrap";
-import {AdicionarUsuarioComponent} from './AdicionarUsuario.component';
 
-export function ListarUsuarios(props) {
+export function ListarVentas(props) {
   
         return (
             
@@ -9,10 +8,10 @@ export function ListarUsuarios(props) {
             <div class="container-inner p-3 my-3 border">
             <br/>
             <br/>
-            <h1>Listado de Usuarios</h1>
+            <h1>Listado de Ventas</h1>
             <br/>
             <div>
-                <AdicionarUsuarioComponent />  
+                <button> + </button>
             </div>
             <br/>
             <Table striped bordered hover size="sm">

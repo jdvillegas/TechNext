@@ -9,6 +9,7 @@ import {PanelVentas} from "./components/panelVentas.component";
 import {ProductRegistration} from './components/productRegistration.component';
 import {ListarUsuarios} from './components/ListarUsuarios.component';
 
+
 function App() {
   return (<Router>
     <div className="App">
@@ -33,7 +34,9 @@ function App() {
                 <Link className="nav-link" to={"/ListarUsuarios"}>Listar Usuarios</Link>
               </li>
             </ul>
+
           </div>
+           
         </div>
       </nav>
      
